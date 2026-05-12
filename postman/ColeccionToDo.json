@@ -6,7 +6,9 @@
     "_exporter_id": "53941498",
     "_collection_link": "https://go.postman.co/collection/53941498-0a8264d7-e2d1-45ba-86a7-a54e8f2e96e1?source=collection_link"
   },
+
   "item": [
+
     {
       "name": "POST crear tarea",
       "event": [
@@ -14,20 +16,17 @@
           "listen": "test",
           "script": {
             "exec": [
-              "pm.test(\"Status 201 Created\", () => {\r",
-              "    pm.response.to.have.status(201);\r",
-              "});\r",
-              "\r",
-              "pm.test(\"Respuesta contiene id\", () => {\r",
-              "    const b = pm.response.json();\r",
-              "    pm.expect(b).to.have.property(\"id\");\r",
-              "\r",
-              "    pm.collectionVariables.set(\"tareaId\", b.id);\r",
+              "pm.test('Status 201 Created', () => {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "pm.test('Respuesta contiene id', () => {",
+              "    const b = pm.response.json();",
+              "    pm.expect(b).to.have.property('id');",
+              "    pm.collectionVariables.set('tareaId', b.id);",
               "});"
             ],
-            "type": "text/javascript",
-            "packages": {},
-            "requests": {}
+            "type": "text/javascript"
           }
         }
       ],
@@ -36,7 +35,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"titulo\": \"Aprender Selenium\",\r\n  \"descripcion\": \"Actividad E2E\"\r\n}",
+          "raw": "{\n  \"titulo\": \"Aprender Selenium\",\n  \"descripcion\": \"Actividad E2E\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -46,18 +45,13 @@
         "url": {
           "raw": "http://localhost:8080/api/tareas",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "8080",
-          "path": [
-            "api",
-            "tareas"
-          ]
+          "path": ["api", "tareas"]
         }
-      },
-      "response": []
+      }
     },
+
     {
       "name": "GET obtener tarea",
       "event": [
@@ -65,13 +59,11 @@
           "listen": "test",
           "script": {
             "exec": [
-              "pm.test(\"Status 200\", () => {\r",
-              "    pm.response.to.have.status(200);\r",
+              "pm.test('Status 200', () => {",
+              "    pm.response.to.have.status(200);",
               "});"
             ],
-            "type": "text/javascript",
-            "packages": {},
-            "requests": {}
+            "type": "text/javascript"
           }
         }
       ],
@@ -81,19 +73,13 @@
         "url": {
           "raw": "http://localhost:8080/api/tareas/{{tareaId}}",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "8080",
-          "path": [
-            "api",
-            "tareas",
-            "{{tareaId}}"
-          ]
+          "path": ["api", "tareas", "{{tareaId}}"]
         }
-      },
-      "response": []
+      }
     },
+
     {
       "name": "PATCH completar tarea",
       "event": [
@@ -101,13 +87,11 @@
           "listen": "test",
           "script": {
             "exec": [
-              "pm.test(\"Status 200\", () => {\r",
-              "    pm.response.to.have.status(200);\r",
+              "pm.test('Status 200', () => {",
+              "    pm.response.to.have.status(200);",
               "});"
             ],
-            "type": "text/javascript",
-            "packages": {},
-            "requests": {}
+            "type": "text/javascript"
           }
         }
       ],
@@ -117,20 +101,13 @@
         "url": {
           "raw": "http://localhost:8080/api/tareas/{{tareaId}}/completar",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "8080",
-          "path": [
-            "api",
-            "tareas",
-            "{{tareaId}}",
-            "completar"
-          ]
+          "path": ["api", "tareas", "{{tareaId}}", "completar"]
         }
-      },
-      "response": []
+      }
     },
+
     {
       "name": "GET verificar completada",
       "event": [
@@ -138,15 +115,12 @@
           "listen": "test",
           "script": {
             "exec": [
-              "pm.test(\"Tarea completada\", () => {\r",
-              "    const b = pm.response.json();\r",
-              "\r",
-              "    pm.expect(b.completada).to.eql(true);\r",
+              "pm.test('Tarea completada', () => {",
+              "    const b = pm.response.json();",
+              "    pm.expect(b.completada).to.eql(true);",
               "});"
             ],
-            "type": "text/javascript",
-            "packages": {},
-            "requests": {}
+            "type": "text/javascript"
           }
         }
       ],
@@ -156,28 +130,43 @@
         "url": {
           "raw": "http://localhost:8080/api/tareas/{{tareaId}}",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "8080",
-          "path": [
-            "api",
-            "tareas",
-            "{{tareaId}}"
-          ]
+          "path": ["api", "tareas", "{{tareaId}}"]
         }
-      },
-      "response": []
+      }
     },
+
     {
       "name": "GET tarea inexistente",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 404', () => {",
+              "    pm.response.to.have.status(404);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "request": {
         "method": "GET",
-        "header": []
-      },
-      "response": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/tareas/999999",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "tareas", "999999"]
+        }
+      }
     }
+
   ],
+
   "variable": [
     {
       "key": "tareaId",
