@@ -101,3 +101,77 @@ Ir a:
 GitHub → Actions
 
 ✔ Estado esperado: check verde (passing)
+
+
+# 🧪 Evidencias del Proyecto ToDoApp
+
+Este documento contiene las evidencias de ejecución de pruebas E2E (Selenium), API (Postman) y CI/CD (GitHub Actions con Newman).
+
+---
+
+# 📸 1. Evidencia Selenium (Pruebas E2E)
+
+## ✔ Tests ejecutados correctamente
+
+![Selenium Tests](test.PNG)
+
+---
+
+# 📸 2. Evidencia Postman
+
+## ✔ POST crear tarea
+
+![POST Tarea](post_tarea.PNG)
+
+---
+
+## ✔ GET obtener tarea
+
+![GET Tarea](get_tarea.PNG)
+
+---
+
+## ✔ PATCH completar tarea
+
+![PATCH Tarea](patch.PNG)
+
+---
+
+## ✔ GET verificar completada
+
+![Verificar completada](GET_verificar_completada.PNG)
+
+---
+
+## ✔ GET tarea inexistente (404)
+
+![Tarea inexistente](get_Tarea_inexistente.PNG)
+
+---
+
+## ✔ Ejecución en Postman Runner
+
+![Runner Postman](run_collections.PNG)
+
+---
+
+## ✔ Vista general Postman
+
+![Postman Tests](test_postman.PNG)
+
+---
+
+# ⚙️ 3. Evidencia GitHub Actions (CI/CD)
+
+## ✔ Ejecución Newman en pipeline
+
+![GitHub Actions](evidencia3_github_actions_newman_green.PNG)
+
+---
+
+# 🧠 Notas
+
+- Todas las pruebas se ejecutaron correctamente.
+- Postman Runner: 0 failures.
+- GitHub Actions: workflow en estado "passing".
+- Selenium ejecutado en modo headless correctamente.
