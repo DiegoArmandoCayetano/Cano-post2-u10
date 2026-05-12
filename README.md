@@ -105,73 +105,56 @@ GitHub → Actions
 
 # 🧪 Evidencias del Proyecto ToDoApp
 
-Este documento contiene las evidencias de ejecución de pruebas E2E (Selenium), API (Postman) y CI/CD (GitHub Actions con Newman).
+---
+
+## 📸 Selenium
+
+![Selenium Tests](docs/test.PNG)
 
 ---
 
-# 📸 1. Evidencia Selenium (Pruebas E2E)
+## 📸 Postman - POST crear tarea
 
-## ✔ Tests ejecutados correctamente
-
-![Selenium Tests](test.PNG)
+![POST](docs/post_tarea.PNG)
 
 ---
 
-# 📸 2. Evidencia Postman
+## 📸 GET obtener tarea
 
-## ✔ POST crear tarea
-
-![POST Tarea](post_tarea.PNG)
+![GET](docs/get_tarea.PNG)
 
 ---
 
-## ✔ GET obtener tarea
+## 📸 PATCH completar tarea
 
-![GET Tarea](get_tarea.PNG)
-
----
-
-## ✔ PATCH completar tarea
-
-![PATCH Tarea](patch.PNG)
+![PATCH](docs/patch.PNG)
 
 ---
 
-## ✔ GET verificar completada
+## 📸 GET verificar completada
 
-![Verificar completada](GET_verificar_completada.PNG)
-
----
-
-## ✔ GET tarea inexistente (404)
-
-![Tarea inexistente](get_Tarea_inexistente.PNG)
+![Verificar](docs/GET_verificar_completada.PNG)
 
 ---
 
-## ✔ Ejecución en Postman Runner
+## 📸 GET tarea inexistente
 
-![Runner Postman](run_collections.PNG)
-
----
-
-## ✔ Vista general Postman
-
-![Postman Tests](test_postman.PNG)
+![404](docs/get_Tarea_inexistente.PNG)
 
 ---
 
-# ⚙️ 3. Evidencia GitHub Actions (CI/CD)
+## 📸 Postman Runner
 
-## ✔ Ejecución Newman en pipeline
-
-![GitHub Actions](evidencia3_github_actions_newman_green.PNG)
+![Runner](docs/run_collections.PNG)
 
 ---
 
-# 🧠 Notas
+## 📸 Postman general
 
-- Todas las pruebas se ejecutaron correctamente.
-- Postman Runner: 0 failures.
-- GitHub Actions: workflow en estado "passing".
-- Selenium ejecutado en modo headless correctamente.
+![Postman](docs/test_postman.PNG)
+
+---
+
+## ⚙️ GitHub Actions
+
+![CI](docs/evidencia3_github_actions_newman_green.PNG)
